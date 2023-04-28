@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../css/calci.css">
+</head>
+<body>
+  <div class="center">
+    <div class=box>Calculator</div>
+    <div class="display"> <label id="output"></label> </div>
+
+    <div>
+      <button onclick="Display(this)" class="column">1</button>
+      <button type="button" onclick="Display(this)" class="column">2</button>
+      <button type="button" onclick="Display(this)" class="column">3</button>
+      <button type="button" onclick="Display(this)" class="column">4</button>
+      <button type="button" onclick="Display(this)" class="column">5</button>
+      <button type="button" onclick="Display(this)" class="column">6</button>
+      <button type="button" onclick="Display(this)" class="column">7</button>
+      <button type="button" onclick="Display(this)" class="column">8</button>
+      <button type="button" onclick="Display(this)" class="column">9</button>
+      <button type="button" onclick="Display(this)" class="column">0</button>
+      <button type="button" onclick="Display(this)" class="column">+</button>
+      <button type="button" onclick="Display(this)" class="column">-</button>
+      <button type="button" onclick="Display(this)" class="column">*</button>
+      <button type="button" onclick="Display(this)" class="column">/</button>
+      <button type="button" onclick="solve()" class="column">=</button>
+      <button type="button" onclick="clearDisplay()" class="column">Clear</button>
+    </div>
+
+  </div>
+  <script>
+    function clearDisplay() {
+      var screen = document.getElementById("output");
+      screen.innerHTML ='';
+
+    }
+    
+    function solve() {
+      var screen = document.getElementById("output");
+      screen.innerHTML = eval(screen.innerHTML);
+
+    }
+    function Display(obj) {
+      console.log(obj)
+      var screen = document.getElementById("output");
+      screen.innerHTML += obj.textContent;
+    }
+  </script>
+</body>
+
+</html>

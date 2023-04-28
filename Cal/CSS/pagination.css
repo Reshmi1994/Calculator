@@ -1,0 +1,11 @@
+button:hover {
+  background-color: blue;
+  color: white
+}
+button {
+  padding: 6px;
+}
+#currentPage {
+  padding : 6px;
+  background-color: blanchedalmond;
+}

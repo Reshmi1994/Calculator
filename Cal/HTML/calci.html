@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/calci.css">
+</head>
+
+<body>
+  <div class="center">
+    <div class=box>Calculator</div>
+    <div class="display"> <label id="output"></label> </div>
+    <div>
+
+      <div>
+        <!-- <button onclick="Display(this)" class="column">1</button>
+      <button type="button" onclick="Display(this)" class="column">2</button>
+      <button type="button" onclick="Display(this)" class="column">3</button>
+      <button type="button" onclick="Display(this)" class="column">4</button>
+      <button type="button" onclick="Display(this)" class="column">5</button>
+      <button type="button" onclick="Display(this)" class="column">6</button>
+      <button type="button" onclick="Display(this)" class="column">7</button>
+      <button type="button" onclick="Display(this)" class="column">8</button>
+      <button type="button" onclick="Display(this)" class="column">9</button>
+      <button type="button" onclick="Display(this)" class="column">0</button> -->
+        <div id="demo"></div>
+
+         <button type="button" onclick="Display(this)" class="column">-</button>
+        <button type="button" onclick="Display(this)" class="column">*</button>
+        <button type="button" onclick="Display(this)" class="column">/</button>
+        <button type="button" onclick="solve()" class="column">=</button>
+        <button type="button" onclick="clearDisplay()" class="column">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill='#FFFFFF'><path d="M21 10h-6s-3-8-4-8-1 1-1 1l1 7H4L2 8H1v8h1l2-2h7c.1 0-1 7-1 7s0 1 1 1 4-8 4-8h6c1 0 2-1 2-2s-1-2-2-2z"></path></g></svg> -->
+          Clear</button>
+      </div>
+    </div>
+
+
+    <script>
+      let text = "";
+
+      for (let i = 0; i <= 9; i++) {
+        text += "<button class='column' onclick=Display(this)>" + i + "</button>"
+
+      }
+
+      document.getElementById("demo").innerHTML = text;
+
+    
+      // function clearDisplay() {
+      //   var screen = document.getElementById("output");
+      //   screen.innerHTML ='';
+
+      // }
+      // clearDisplay=function() {
+      //   var screen = document.getElementById("output");
+      //   screen.innerHTML ='';
+
+      // }
+      clearDisplay = () => {
+        var screen = document.getElementById("output");
+        screen.innerHTML = '';
+
+      }
+
+      function solve() {
+        var screen = document.getElementById("output");
+        screen.innerHTML = eval(screen.innerHTML);
+
+      }
+      function Display(obj) {
+        console.log(obj)
+        var screen = document.getElementById("output");
+        screen.innerHTML += obj.textContent;
+      }
+    </script>
+</body>
+
+</html>
